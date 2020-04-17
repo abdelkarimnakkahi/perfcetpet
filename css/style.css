@@ -1,0 +1,531 @@
+:root {
+    --dark-color: #555;
+    --blue-color: royalblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--dark-color);
+    font-family: arial;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.lead {
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.custom-padding {
+    padding: 7% 3%;
+}
+
+/* ---------------------- Header ---------------------- */
+header {
+    background: #fff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 5px 5px -5px rgb(35, 66, 161, 0.3);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header .logo a {
+    color: var(--dark-color);
+}
+
+header .logo span {
+    color: var(--blue-color);
+}
+
+header nav ul {
+    background: #fff;
+    /* display: none; */
+    position: absolute;
+    top: -10rem;
+    transition: .5s top ease-in-out;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    z-index: -1;
+}
+
+header nav ul li {
+    transition: .3s background ease-in-out;
+}
+
+header nav ul li a {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    transition: .3s color ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #252525;
+}
+
+header nav .toggle {
+    width: 35px;
+    cursor: pointer;
+}
+
+.show {
+    top: 10vh;
+    z-index: -1;
+}
+
+.show li {
+    /* padding: 0 1rem; */
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.show li:hover {
+    background: rgb(188, 205, 255);
+
+}
+
+/* ---------------------- Showcase ---------------------- */
+/*  */
+
+#showcase {
+    background-image: url('../images/dog_small.jpg');
+    background-size: cover;
+    color: var(--dark-color);
+    text-align: center;
+    height: 90vh;
+    background-color: #f7fbfe;
+}
+
+#showcase h1 {
+    color: var(--blue-color);
+    font-size: 2.5rem;
+    padding-top: 25%;
+}
+
+#showcase p {
+    margin-top: 0.5rem;
+}
+
+/* ---------------------- Sponsorship ---------------------- */
+#sponsors .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    grid-gap: 3rem;
+    padding: 2.5rem 1.5rem;
+}
+
+/* ---------------------- About ---------------------- */
+#about {
+    background: #fff;
+    padding: 3rem;
+}
+
+#about .content .content-image {
+    display: none;
+}
+
+#about .content .content-image img {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+#about .content .content-text h3 {
+    font-size: 1.5rem;
+}
+
+#about .content .content-text p {
+    margin-bottom: 1rem;
+    max-width: 500px;
+    text-align: justify;
+    margin: 1rem 0 1.5rem;
+}
+
+#about .content .content-text a {
+    background: var(--dark-color);
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: .3s background ease-in-out;
+}
+
+#about .content .content-text a:hover {
+    background: #252525;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+/* ---------------------- Our Pets ---------------------- */
+#our-pets {
+    background: var(--blue-color);
+    color: #fff;
+}
+
+#our-pets .container h2 {
+    margin-bottom: 1rem;
+}
+
+#our-pets .container .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+#our-pets .container .content .pet-box {
+    background: #fff;
+    color: var(--dark-color);
+}
+
+#our-pets .container .content .pet-box .pet-image {
+    width: 100%;
+}
+
+#our-pets .container .content .pet-box .pet-image img {
+    width: 100%;
+}
+
+#our-pets .container .content .pet-box .pet-text {
+    padding: 1rem;
+}
+
+#our-pets .container .content .pet-box .pet-text h3 {
+    color: var(--blue-color);
+}
+
+#our-pets .container .content .pet-box .pet-text p {
+    margin: 1rem 0;
+}
+
+#our-pets .container .content .pet-box .pet-text a {
+    background: var(--blue-color);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+
+#our-pets .container .content .pet-box .pet-text a:hover {
+    background: rgb(40, 75, 180);
+}
+
+/* ---------------------- Our Team ---------------------- */
+#our-team {
+    background: #fff;
+
+}
+
+#our-team .team-content {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#our-team .team-content .team-box {
+    max-width: 205px;
+    margin: 0 auto 1.5rem;
+}
+
+#our-team img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+#our-team h2 {
+    margin-bottom: 1.5rem;
+}
+
+#our-team h3 {
+    margin-bottom: .5rem;
+}
+
+/* ---------------------- Contact ---------------------- */
+#contact {
+    background: rgb(195, 210, 255);
+    color: var(--blue-color);
+}
+
+#contact h2 {
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input,
+#contact textarea,
+#contact button {
+    border: none;
+    padding: .7rem 1rem;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+#contact input,
+#contact textarea {
+    border: 1px solid var(--blue-color);
+}
+
+#contact button {
+    background: var(--blue-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .3s background ease-in-out;
+    margin-bottom: 0;
+}
+
+#contact button:hover {
+    background: rgb(17, 60, 189);
+}
+
+/* ---------------------- Footer ---------------------- */
+footer {
+    background: rgb(23, 36, 77);
+    color: #ddd;
+}
+
+footer .address>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+footer .address a,
+footer .company a {
+    color: #ddd;
+}
+
+footer .address a:hover,
+footer .company a:hover {
+    color: #fff;
+}
+
+footer .icon {
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+footer .company p {
+    font-size: 1rem;
+    max-width: 245px;
+    margin: 1rem 0;
+}
+
+.fa-2x {
+    margin-right: 1rem;
+}
+
+/* ---------------------- Mediaqueries ---------------------- */
+@media screen and (min-width : 600px) {
+
+    /* ------ Our Team ------- */
+
+    #our-team .team-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    #our-team .team-content .team-box {
+        max-width: 175px;
+        margin: 0;
+    }
+
+    /* ------ Showcase ------ */
+    #showcase h1 {
+        font-size: 3rem;
+        padding-top: 15%;
+    }
+
+    /* ------ Our Pets ------ */
+    #our-pets .container .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ------ Footer ------ */
+    footer .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width : 768px) {
+
+    /* ------ Showcase ------ */
+
+    #showcase {
+        background-image: url('../images/dog.jpg');
+    }
+
+    #showcase h1 {
+        padding-top: 10%;
+    }
+
+    /* ------ Header ------ */
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        z-index: 1;
+    }
+
+    header nav ul li {
+        padding: 0 1rem;
+    }
+
+    header nav ul li:first-child{
+        padding-left: 0;
+    }
+
+    header nav ul li:last-child{
+        padding-right: 0;
+    }
+
+    header nav .toggle {
+        display: none;
+    }
+
+    /* ------ About ------ */
+    #about {
+        padding: 0;
+    }
+
+    #about .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about .content .content-image {
+        display: inline-block;
+    }
+
+    #about .content .content-text {
+        padding: 1.5rem;
+    }
+
+
+    /* ------ Contact ------ */
+
+
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    #contact input,
+    #contact textarea,
+    #contact button {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    #contact input[name='lastName'] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #contact input[type='email'] {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #contact textarea {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+@media screen and (min-width : 980px) {
+
+    /* ------ Showcase ------ */
+    #showcase h1 {
+        font-size: 3.5rem;
+    }
+
+    .lead {
+        font-size: 1.5rem;
+    }
+
+    /* ------ Our Pet ------ */
+    #our-pets .container .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* ------ Footer ------ */
+
+    footer .container {
+        display: flex;
+    }
+
+    footer .address {
+        flex: 2;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    footer .company {
+        flex: 1;
+    }
+
+    footer .address>div {
+        margin-right: 1.5rem;
+    }
+}
