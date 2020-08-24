@@ -167,13 +167,11 @@ header nav .toggle {
 }
 
 #about .content .content-image {
-    display: none;
+    height: 100%
 }
 
 #about .content .content-image img {
     width: 100%;
-    min-height: 100%;
-    max-height: 100%;
 }
 
 #about .content .content-text h3 {
